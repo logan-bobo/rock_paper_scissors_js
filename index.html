@@ -23,17 +23,28 @@
                 return "You win, rock beats scissors!"
             } else if (playerChoice === "paper" && cpuChoice === "paper") {
                 return "Its a draw, you both picked paper"
-            } else if (playerChoice === "scisors" && cpuChoice === "scissors") {
+            } else if (playerChoice === "scissors" && cpuChoice === "scissors") {
                 return "Its a draw, you both picked scissors"
             } else if (playerChoice === "rock" && cpuChoice === "paper") {
                 return "You lose, paper beats rock"
             } else if (playerChoice === "paper" && cpuChoice === "scissors") {
                 return "You lose, scissors beats paper"
-            } else {
+            } else if (playerChoice === "scissors" && cpuChoice === "rock") {
                 return "You lose, rock beats scissors"
+            } else {
+                return "Input was not valid"
             }
         }
 
-        console.log(playRound("paper", getComputerChoice()));
+        function game () {
+            for (let i = 0; i < 5; i++) {
+                let playerChoice = prompt("Pick rock, paper or scissors");
+                let gameResult = playRound(playerChoice, getComputerChoice());
+                alert(gameResult);
+            }
+        }
+
+        game();
+
     </script>
 </body>
