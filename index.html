@@ -7,32 +7,32 @@
 <body>
     <script>
         function getComputerChoice () {
-            const randomInt = Math.floor(Math.random() * 3)
-            const choices = ["rock", "paper", "scissors"]
-            return choices[randomInt]
+            let randomInt = Math.floor(Math.random() * 3);
+            let choices = ["rock", "paper", "scissors"];
+            return choices[randomInt];
         }
 
         function playRound (playerChoice, cpuChoice) {
             if (playerChoice === "rock" && cpuChoice === "rock") {
-                return "Its a draw, you both picked rock!"
+                return "Its a draw, you both picked rock!";
             } else if (playerChoice === "paper" && cpuChoice === "rock") {
-                return "You win, paper beats rock!"
+                return "You win, paper beats rock!";
             } else if (playerChoice === "scissors" && cpuChoice === "paper") {
-                return "You win, scissors beats paper!"
+                return "You win, scissors beats paper!";
             } else if (playerChoice === "rock" && cpuChoice === "scissors") {
-                return "You win, rock beats scissors!"
+                return "You win, rock beats scissors!";
             } else if (playerChoice === "paper" && cpuChoice === "paper") {
-                return "Its a draw, you both picked paper"
+                return "Its a draw, you both picked paper";
             } else if (playerChoice === "scissors" && cpuChoice === "scissors") {
-                return "Its a draw, you both picked scissors"
+                return "Its a draw, you both picked scissors";
             } else if (playerChoice === "rock" && cpuChoice === "paper") {
-                return "You lose, paper beats rock"
+                return "You lose, paper beats rock";
             } else if (playerChoice === "paper" && cpuChoice === "scissors") {
-                return "You lose, scissors beats paper"
+                return "You lose, scissors beats paper";
             } else if (playerChoice === "scissors" && cpuChoice === "rock") {
-                return "You lose, rock beats scissors"
+                return "You lose, rock beats scissors";
             } else {
-                return "Input was not valid"
+                return "Input was not valid";
             }
         }
 
